@@ -11,6 +11,8 @@ const result = _.concat(arr1, arr2);
 console.log('result:', result);
 
 
+
+
 fs.appendFile('greetings.txt', `Hello ${username}`, err => {
     if(err) {
       console.log('Unable to write to file');
