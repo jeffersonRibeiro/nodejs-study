@@ -3,7 +3,16 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Hello World 123');
+  res.send({
+    name: 'Jeff',
+    surname: 'Ribeiro',
+    skills: [
+      'NodeJs',
+      'ReactJs',
+      'Webpack',
+      'Mocha',
+    ],
+  });
 });
 
 app.listen(3000, 'localhost', () => {
