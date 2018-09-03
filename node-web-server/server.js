@@ -1,13 +1,24 @@
+const hbs = require('hbs');
 const express = require('express');
+
 
 const app = express();
 
+app.set('view engine', 'hbs');
 app.use(express.static(`${__dirname}/public`));
+console.log(__dirname);
 
 app.get('/', (req, res) => {
   res.send('Hello Express!');
 });
 
-app.listen(3000, 'localhost', () => {
-  console.log('Server listing on localhost:3000');
+app.get('/about', (req, res) => {
+  res.render('about.hbs', {
+    title: 'About',
+    desc: 'Just a handlebar template',
+  });
+});
+
+app.listen(3000, () => {
+  console.log('Server is up on localhost:3000');
 });
