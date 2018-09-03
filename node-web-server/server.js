@@ -16,6 +16,16 @@ app.get('/about', (req, res) => {
   res.render('about.hbs', {
     title: 'About',
     desc: 'Just a handlebar template',
+    skills: [
+      {
+        name: 'NodeJs',
+        desc: 'Javascript that runs outside of the browser enviroment using the same engine Chrome V8',
+      },
+      {
+        name: 'Mocha, sinon, chai',
+        desc: 'Mocha is used to run tests, sinon to make the stubs, mocks and spies and chai for complex assertions'
+      },
+    ]
   });
 });
 
